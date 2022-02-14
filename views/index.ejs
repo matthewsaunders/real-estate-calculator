@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>&#129518; Real Estate Calculator</title>
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/index.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <div class="Calculator">
+      <div class="Calculator__row">
+        <div class="Link">
+          <p class="Link__label">Refin Link:</p>
+
+          <div class="Link__form">
+            <input id="js-form-link" class="Link__input" type="text" placeholder="Redfin URL" />
+            <button id="js-form-submit" class="Link__button">Go!</button>
+          </div>
+        </div>
+      </div>
+
+      <%- include('loading') %>
+
+      <%- include('listing') %>
+      <%- include('simulations') %>
+    </div>
+  </body>
+</html>

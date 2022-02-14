@@ -1,0 +1,145 @@
+:root {
+  --padding-default-x: 0.8rem;
+  --padding-default-y: 0.2rem;
+  --padding-input: 0.4rem;
+
+  --colors-text-black: #000;
+  --colors-text-gray: #808080;
+  --colors-light-gray: #d7d7d7;
+
+  --colors-first: #6867AC;
+  --colors-second: #A267AC;
+  --colors-third: #CE7BB0;
+  --colors-fourth: #FFBCD1;
+}
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  padding: var(--padding-input);
+}
+
+.hidden {
+  display: none;
+}
+
+.Loading {
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Loading.hidden {
+  display: none;
+}
+
+.Calculator {
+  height: 100vh;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Calculator__row {
+  width: 100%;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.Link__label {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  margin-bottom: var(--padding-default-y);
+}
+
+.Link__form {
+  display: flex;
+  flex-direction: row;
+}
+
+.Link__input {
+  flex-grow: 1;
+  margin-right: var(--padding-input);
+}
+
+.Link__button {
+  padding: var(--padding-input);
+  /* background-color: var(--colors-first);
+  color: white;
+  border-raidus: 4px; */
+}
+.Link__button:hover {
+  cursor: pointer;
+}
+
+.Listing {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.Listing div:not(:last-child) {
+  border-right: 1px solid var( --colors-text-gray);
+}
+
+.Listing div:not(:first-child) {
+  padding-left: var(--padding-default-x);
+}
+
+.Listing tr > :nth-child(1) {
+  font-weight: bold;
+  padding-right: 0.8rem;
+}
+
+.Listing h2 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.Listing__column {
+  flex-grow: 1;
+}
+
+.Listing__facts h2 { color: var(--colors-first); }
+.Listing__costs h2 { color: var(--colors-second); }
+.Listing__pricing h2 { color: var(--colors-third); }
+.Listing__mortgage h2 { color: var(--colors-fourth); }
+
+.Simulator {
+  display: flex;
+  flex-direction: row;
+}
+.Simulator__col {
+  display: flex;
+  flex-direction: column;
+}
+.Simulator__col > div {
+  height: 1.25rem;
+  min-width: 120px;
+  padding: var(--padding-default-y) var(--padding-default-x);
+  border-bottom: 1px solid var(--colors-light-gray);
+  border-right: 1px solid var(--colors-light-gray);
+}
+.Simulator__headers {
+  font-weight: 700;
+}
+.Simulator > :not(.Simulator__headers) > div {
+  text-align: right;
+}
+
+/* .Simulator tr > :nth-child(1) {
+  font-weight: bold;
+}
+
+.Simulator__headers {
+  color: var( --colors-text-gray);
+  font-weight: bold;
+} */
